@@ -1,0 +1,43 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border: nonesolid #000; /* Add a border to contain the text within the container */
+    height: 50px; /* Set a fixed height for the container */
+}
+
+.marquee {
+    white-space: nowrap;
+    position: absolute;
+    animation: scroll 10s linear infinite;
+    border: nonesolid #000; /* Add a border to contain the text within the marquee */
+    height: 100%; /* Make sure the marquee has the same height as the container */
+}
+
+.marquee p {
+    display: inline-block;
+    margin: 0; /* Remove default margin for the text */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee {
+    /* ... */
+    animation: scroll 10s linear infinite;
+    /* ... */
+}
